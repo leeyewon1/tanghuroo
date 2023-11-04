@@ -1,4 +1,4 @@
-.inner{
+.inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
@@ -20,22 +20,27 @@
     margin: 0 0 22px 0;
 }
 
-title p {
+.title p {
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
 }
 
+
 .Header {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
-    position: fixed;
+
+    transition: 0.5s;
+
     line-height: 80px;
-    border-bottom: 1px solid rgba(225,250,250,0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.Header .on {
+
+.Header.on {
     background: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -48,27 +53,32 @@ title p {
 
 .gnb>ul {
     display: flex;
+
 }
 
 .gnb>ul>li>a {
     display: block;
     padding: 0 24px;
-    color: #FFF;
+    color: #fff;
     font-size: 20px;
 }
 
-.Header.on .gnb>ul>li>a{
+.Header.on .gnb>ul>li>a {
     color: #333;
 }
 
+
+
 .gnb>ul>li {
     position: relative;
+
 }
+
 .gnb>ul>li .sub {
     position: absolute;
     top: 100px;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     background: #fff;
     width: 150px;
     line-height: 40px;
@@ -79,21 +89,18 @@ title p {
     transition: 0.5s;
 }
 
-.gnb>ul>li:hover.sub {
+.gnb>ul>li:hover .sub {
     top: 70px;
     opacity: 1;
     visibility: visible;
-   
 }
 
 .gnb>ul>li .sub li~li {
     border-top: 1px solid #ddd;
-
 }
 
-
 .gnb>ul>li .sub a {
-    display: block;
+    subdisplay: block;
     padding: 0 24px;
 }
 
@@ -103,63 +110,66 @@ title p {
     margin: 0 4px;
 }
 
-.Header .utils a {
+.Header.on .utils a {
     color: #333;
-}
+} 
 
 .MainVisual .VisualSlide .itm {
     position: relative;
     height: 700px;
 }
+
 .MainVisual .VisualSlide .itm::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-   right: 0;
-   bottom: 0;
-   background: #000;
-   opacity: 0.3;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.3;
 }
-
 
 .MainVisual .VisualSlide .itm01 {
-    background: url(../imges/BBBB01.jpg)no-repeat center center/cover;
+    background: url(../imges/main01.jpg) 
+    no-repeat center center/cover;
 }
 .MainVisual .VisualSlide .itm02 {
-    background: url(../imges/BBBB02.jpg)no-repeat center center/cover;
+    background: url(../imges/main02.jpg) 
+    no-repeat center center/cover;
 }
 .MainVisual .VisualSlide .itm03 {
-    background: url(../imges/BBBBB03.jpg)no-repeat center center/cover;
+    background: url(../imges/main03.jpg) 
+    no-repeat center center/cover;
 }
 
-.MainVisual .MainSlide .slogan {
+.MainVisual .VisualSlide .slogan {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     max-width: 1200px;
     width: 100%;
+    
 }
 
-.MainVisual .MainSlide .slogan strong {
+.MainVisual .VisualSlide .slogan strong {
     display: block;
     margin: 0 0 22px 0;
     font-size: 40px;
     font-weight: 700;
     text-shadow: 0 0 1px #000;
-    color: #FFF;
+    color: #fff;
 }
 
-.MainVisual .MainSlide .slogan p {
+.MainVisual .VisualSlide .slogan p {
     font-size: 18px;
     text-shadow: 0 0 1px #000;
     color: #fff;
     line-height: 22px;
-
 }
 
-.MainVisual .MainSlide .slick-dots {
+.MainVisual .VisualSlide .slick-dots {
     position: absolute;
     bottom: 100px;
     left: 50%;
@@ -168,59 +178,59 @@ title p {
     width: 100%;
 }
 
-.MainVisual .MainSlide .slick-dots li {
+.MainVisual .VisualSlide .slick-dots li {
     position: relative;
     display: inline-block;
     width: 100px;
     height: 4px;
-    background: #FFF;
-    margin: 0 10px 0 0;
+    background: #fff;
+    margin: 0 10px 0 0 ;
     border-radius: 2px;
+    overflow: hidden;
 }
 
-.MainVisual .MainSlide .slick-dots li::after {
-    content: "";
+.MainVisual .VisualSlide .slick-dots li::after {
+    content:"";
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     width: 0;
-    background: #F00;
+    background: #f00;
 }
 
-.slick-active::after {
+.MainVisual .VisualSlide .slick-dots li.slick-active::after {
     width: 100%;
     transition: 3s;
-
 }
 
-.MainVisual .MainSlide .slick-dots li button {
+.MainVisual .VisualSlide .slick-dots li button {
     display: none;
 }
 
 .MainFrancuise .inner {
     display: flex;
-    gap: 30px;
+    gap:30px;
 
 }
 
 .MainFrancuise .inner>* {
-    flex:1;
+    flex: 1;
     background: #f9f9f9;
     padding: 0 0 32px 0;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.MainFrancuise .img_box{
+.MainFrancuise .img_box {
     margin: 0 0 24px 0;
 }
 
-.MainFrancuise .itm{
+.MainFrancuise .itm {
     position: relative;
 }
 
-.MainFrancuise .itm::after {
+.MainFrancuise .itm a::after {
     content: "더보기";
     position: absolute;
     top: 100px;
@@ -247,18 +257,19 @@ title p {
     padding: 0 24px;
 }
 
+
 .MainBanner {
     position: relative;
-    background: url(../imges/b01.jpg)no-repeat fixed center center/cover;
+    background: url(../imges/main02.jpg)
+    no-repeat fixed center center/cover;
 }
 
-.MainBanner::before{
+.MainBanner::before {
     content: "";
     position: absolute;
-    inset:0 0 0 0;
-    background: rgba(0, 0, 0, 0.3);
+    inset: 0 0 0 0;
+    background:rgba(0, 0, 0, 0.3) ;
     backdrop-filter: blur(5px);
-
 }
 
 .MainBanner .title {
@@ -268,41 +279,46 @@ title p {
     text-overflow: 0 0 2px #000;
 }
 
-.MainFrenchiseOrder {}
 
-.MainFrenchiseOrder .inner{
+.MainFranchiseOrder {}
+
+
+
+.MainFranchiseOrder .inner {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.MainFrenchiseOrder .inner>* {
+.MainFranchiseOrder .inner>* {
     padding: 32px 24px;
     background: #f9f9f9;
     border-radius: 8px;
-    border: 1px solid#ddd;
-
+    border: 1px solid #ddd
+    
 }
-.MainFrenchiseOrder .odr{ 
+
+.MainFranchiseOrder .odr {
     position: relative;
-
 }
 
-.MainFrenchiseOrder .odr h3 {
+.MainFranchiseOrder .odr h3 {
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 22px 0;
 }
-.MainFrenchiseOrder .odr p {
+
+.MainFranchiseOrder .odr p {
     font-size: 16px;
-line-height: 20px;
+    line-height: 20px;
 }
 
-.MainFrenchiseOrder .odr::after {
+.MainFranchiseOrder .odr::after {
     content: attr(data-num);
     position: absolute;
     top: 0;
     right: 24px;
+
     width: 40px;
     height: 40px;
     text-align: center;
@@ -314,11 +330,11 @@ line-height: 20px;
     transform: translate(0,-20px);
 }
 
-.MainFrenchiseOrder .odr h3::before{
+.MainFranchiseOrder .odr h3::before {
     content: attr(data-step);
     display: block;
     margin: 0 0 8px 0;
-    color: #fff;
+    color: #f00;
     font-size: 14px;
 }
 
@@ -330,13 +346,13 @@ line-height: 20px;
 
 .Footer .inner {
     display: flex;
-  justify-content: space-between;
+    justify-content: space-between;
 }
+
 .Footer .link {
     display: flex;
     gap: 40px;
     margin: 0 0 24px 0;
-
 }
 
 .Footer .link li {
@@ -348,10 +364,20 @@ line-height: 20px;
     position: absolute;
     top: 50%;
     left: -20px;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     width: 1px;
     height: 12px;
     background: #666;
+}
+
+.Footer .company {
+    margin: 0 0 24px 0;
+}
+
+.Footer .company li {
+    display: inline-block;
+    margin: 0 18px 4px 0;
+    font-size: 14px;
 }
 
 .Footer .customer {
@@ -367,7 +393,33 @@ line-height: 20px;
     margin: 0 16px 0 0;
 }
 
-.Footer .customer .tel span{
+.Footer .customer .tel span {
     font-size: 32px;
     font-weight: 900;
+}
+
+.totop {
+    position: fixed;
+    bottom: 100px;
+    right: -100px;
+    background: transparent;
+    border:  none;
+
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.totop.on {
+    right: 100px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.totop i {
+    padding: 16px;
+    background: #f00;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
 }

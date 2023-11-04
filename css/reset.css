@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +10,6 @@ ul,
 ol,
 li {
     list-style: none;
-
 }
 
 i,
@@ -20,18 +18,17 @@ address {
     font-style: normal;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-body{
+body {
     line-height: 1;
     word-break: keep-all;
 }
 
-img{
+img {
     vertical-align: middle;
     max-width: 100%;
 }
-
